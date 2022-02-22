@@ -36,4 +36,6 @@ Example app listening at http://:: 80
 # Trigger the create tables job
 [root@master1 knex-test]# centos
 If you don't see a command prompt, try pressing enter.
+[root@centos-util-1645529154 /]# curl -X POST http://knex-test.test/create
+[root@centos-util-1645529154 /]#
 ```
