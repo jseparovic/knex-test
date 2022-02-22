@@ -4,7 +4,6 @@ Typical Sample Output:
 ```
 [root@master1 knex-test]# ktl pod/knex-test-8468cf55bd-6g5d9
 yarn run v1.22.17
-warning package.json: No license field
 $ node dist/tsc
 Example app listening at http://:: 80
 Schema table1 Initialized

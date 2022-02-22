@@ -14,7 +14,6 @@ f_install_test
 # Check the logs on knex-test pod
 [root@master1 knex-test]# ktlkt
 yarn run v1.22.17
-warning package.json: No license field
 $ node dist/tsc
 Knex Test app listening at http://:: 80
 (see OUTPUT.md for sample)
