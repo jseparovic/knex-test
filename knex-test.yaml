@@ -1,0 +1,58 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+    name: test
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: knex-test
+    namespace: test
+spec:
+    selector:
+        matchLabels:
+            app: knex-test
+    replicas: 1
+    template:
+        metadata:
+            labels:
+                app: knex-test
+        spec:
+            containers:
+                - name: knex-test
+                  image: jseparovic/knex-test
+                  env:
+                      - name: DB_TYPE
+                        value: "mysql"
+                      - name: MYSQL_HOST
+                        value: "test-zone1-vtgate-0c401c10.vitess"
+                      - name: MYSQL_USER
+                        value: "test"
+                      - name: MYSQL_DATABASE
+                        value: "test"
+                      - name: MYSQL_PASSWORD
+                        value: "test"
+                      - name: LISTEN_PORT
+                        value: "80"
+                          # DEBUG=knex:query for just queries
+                          # DEBUG=knex:tx for transactions
+                          # DEBUG=knex:* for everything
+                      - name: _DEBUG
+                        value: "knex:*"
+                  ports:
+                      - name: app
+                        containerPort: 80
+                  imagePullPolicy: Always
+---
+kind: Service
+apiVersion: v1
+metadata:
+    name: knex-test
+    namespace: test
+spec:
+    selector:
+        app: knex-test
+    ports:
+        - protocol: TCP
+          port: 80
+          targetPort: app
