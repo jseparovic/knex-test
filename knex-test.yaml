@@ -37,7 +37,7 @@ spec:
                           # DEBUG=knex:query for just queries
                           # DEBUG=knex:tx for transactions
                           # DEBUG=knex:* for everything
-                      - name: _DEBUG
+                      - name: DEBUG
                         value: "knex:*"
                   ports:
                       - name: app
