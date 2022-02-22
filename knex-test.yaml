@@ -25,7 +25,7 @@ spec:
                       - name: DB_TYPE
                         value: "mysql"
                       - name: MYSQL_HOST
-                        value: "test-zone1-vtgate-0c401c10.vitess"
+                        value: "test-zone1-vtctld-4b9743f0.vitess"
                       - name: MYSQL_USER
                         value: "test"
                       - name: MYSQL_DATABASE
