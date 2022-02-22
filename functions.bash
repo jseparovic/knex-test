@@ -44,3 +44,5 @@ alias ktga='kt get all'
 
 alias watch='watch '
 alias w='watch '
+
+alias centos='kubectl run centos-util-`date '+%s'` --rm -i --tty --image jseparovic/centos-util -- /bin/bash'
