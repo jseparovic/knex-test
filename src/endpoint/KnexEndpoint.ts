@@ -1,4 +1,3 @@
-
 import {Router, Request, Response, NextFunction} from 'express';
 const routes = Router();
 import knex, {Knex} from 'knex';
