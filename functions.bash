@@ -46,3 +46,9 @@ alias watch='watch '
 alias w='watch '
 
 alias centos='kubectl run centos-util-`date '+%s'` --rm -i --tty --image jseparovic/centos-util -- /bin/bash'
+
+function ktlp {
+    ktl `kubectl get pods -l app=${1} -o jsonpath="{.items[0].metadata.name}" -n test`
+}
+
+alias ktlkt='ktlp knex-test'
