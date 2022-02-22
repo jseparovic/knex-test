@@ -18,6 +18,16 @@ import {Table17} from './Table17';
 import {Table18} from './Table18';
 import {Table19} from './Table19';
 import {Table20} from './Table20';
+import {Table21} from './Table21';
+import {Table22} from './Table22';
+import {Table23} from './Table23';
+import {Table24} from './Table24';
+import {Table25} from './Table25';
+import {Table26} from './Table26';
+import {Table27} from './Table27';
+import {Table28} from './Table28';
+import {Table29} from './Table29';
+import {Table30} from './Table30';
 import {ModelEntity} from "../modelentity/ModelEntity";
 
 export function getModelEntityTypes(): typeof ModelEntity[] {
@@ -42,5 +52,15 @@ export function getModelEntityTypes(): typeof ModelEntity[] {
         Table18,
         Table19,
         Table20,
+        Table21,
+        Table22,
+        Table23,
+        Table24,
+        Table25,
+        Table26,
+        Table27,
+        Table28,
+        Table29,
+        Table30,
     ];
 }
