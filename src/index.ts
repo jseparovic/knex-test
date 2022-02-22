@@ -14,5 +14,5 @@ app.use('/', routes);
 
 const server = app.listen(process.env.LISTEN_PORT, () => {
     // @ts-ignore
-    console.log("Example app listening at http://%s", server?.address()?.address, server?.address()?.port)
+    console.log("Knex Test app listening at http://%s", server?.address()?.address, server?.address()?.port)
 })

@@ -16,7 +16,7 @@ f_install_test
 yarn run v1.22.17
 warning package.json: No license field
 $ node dist/tsc
-Example app listening at http://:: 80
+Knex Test app listening at http://:: 80
 (see OUTPUT.md for sample)
 
 # Trigger the create tables job:
