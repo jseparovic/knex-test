@@ -16,7 +16,7 @@
         "build": "tsc -p tsconfig.json",
         "build-all": "yarn clean && yarn build",
         "do-install": "yarn install",
-        "start": "yarn build && node dist/tsc"
+        "start": "node dist/tsc"
     },
     "dependencies": {
         "@types/express": "^4.17.13",
