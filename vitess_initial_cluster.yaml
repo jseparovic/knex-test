@@ -95,7 +95,7 @@ stringData:
       "test": [{
         "UserData": "test",
         "Password": "test"
-      }],
+      }]
     }
   init_db.sql: |
     # This file is executed immediately after mysql_install_db,
