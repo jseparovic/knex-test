@@ -97,14 +97,14 @@ export class KnexEndpoint {
     }
 
     setupCreateModelRoutes(): Router {
-        routes.post('/create', wrapAsync(async (_req:Request, res:Response) => {
+        routes.post('/ddl', wrapAsync(async (_req:Request, res:Response) => {
             for (const entity of this._model) {
                 await this.initializeSchemaDDL(entity);
             }
             res.send(200);
         }));
 
-        routes.delete('/drop', wrapAsync(async (_req:Request, res:Response) => {
+        routes.delete('/ddl', wrapAsync(async (_req:Request, res:Response) => {
             for (const entity of this._model) {
                 await this.dropSchemaDDL(entity);
             }
