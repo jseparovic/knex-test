@@ -101,14 +101,14 @@ export class KnexEndpoint {
             for (const entity of this._model) {
                 await this.initializeSchemaDDL(entity);
             }
-            res.send(200);
+            res.sendStatus(200);
         }));
 
         routes.delete('/ddl', wrapAsync(async (_req:Request, res:Response) => {
             for (const entity of this._model) {
                 await this.dropSchemaDDL(entity);
             }
-            res.send(202);
+            res.sendStatus(202);
         }));
 
         return routes;
