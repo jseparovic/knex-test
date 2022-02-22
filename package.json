@@ -2,7 +2,7 @@
     "name": "knex-test",
     "version": "0.1.0",
     "description": "Knex test",
-    "license": "GPL",
+    "license": "UNLICENSED",
     "main": "dist/tsc/index.js",
     "types": "dist/tsc/index.d.ts",
     "files": [
