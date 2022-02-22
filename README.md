@@ -25,6 +25,9 @@ NAME                                   DESIRED   CURRENT   READY   AGE
 replicaset.apps/knex-test-56644946df   1         1         1       16m
 
 [root@master1 knex-test]# ktl pod/knex-test-56644946df-2bcqh
+yarn run v1.22.17
+warning package.json: No license field
+$ node dist/tsc
 Example app listening at http://:: 80
 (see OUTPUT.md for sample)
 
