@@ -25,13 +25,24 @@ spec:
             name: test-cluster-config
             key: users.json
       replicas: 3
-
+      resources:
+        requests:
+          cpu: 5000m
+          memory: 8Gi
+        limits:
+          memory: 8Gi
   vitessDashboard:
     cells:
     - zone1
     extraFlags:
       security_policy: read-only
     replicas: 3
+    resources:
+      limits:
+        memory: 4Gi
+      requests:
+        cpu: 5000m
+        memory: 4Gi
 
   keyspaces:
   - name: test
@@ -52,6 +63,19 @@ spec:
             vttablet:
               extraFlags:
                 db_charset: utf8mb4
+              resources:
+                limits:
+                  memory: 8Gi
+                requests:
+                  cpu: 5000m
+                  memory: 8Gi
+            mysqld:
+              resources:
+                limits:
+                  memory: 8Gi
+                requests:
+                  cpu: 5000m
+                  memory: 8Gi
             dataVolumeClaimTemplate:
               accessModes: ["ReadWriteOnce"]
               resources:
