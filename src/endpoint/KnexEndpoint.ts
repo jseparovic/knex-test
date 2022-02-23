@@ -6,7 +6,7 @@ import util from 'util';
 import {ModelEntity} from "../modelentity/ModelEntity";
 
 const CONNECTION_RETRY_MS = 2000;
-const RETRIES = 15;
+const RETRIES = 0;
 
 const wrapAsync = (fn: (req: Request, res: Response, next: NextFunction) => Promise<void>) => {
     return (req: Request, res: Response, next: NextFunction) => {
