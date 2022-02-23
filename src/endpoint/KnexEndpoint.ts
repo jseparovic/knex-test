@@ -26,7 +26,7 @@ export class KnexEndpoint {
         this._model = model;
         this._knex = knex({
             client: 'mysql',
-            connection: {
+            connection: process.env.DATABASE_URL || {
                 host: process.env.MYSQL_HOST,
                 user: process.env.MYSQL_USER,
                 database: process.env.MYSQL_DATABASE,
